@@ -1,0 +1,11 @@
+const API_URL = import.meta.env.VITE_API_URL;
+
+export async function apiFetch(endpoint) {
+    const response = await fetch(`${API_URL}${endpoint}`);
+
+    if (!response.ok) {
+        throw new Error(`API Error: ${response.status}`);
+    }
+
+    return response.json();
+}
