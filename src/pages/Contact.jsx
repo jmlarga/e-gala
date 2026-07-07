@@ -80,7 +80,6 @@ export default function Contact() {
 
 		try {
 			const response = await fetch(
-				"http://192.168.1.237/e-gala-api/wp-json/e-gala/v1/contact",
 				{
 					method: "POST",
 					headers: {

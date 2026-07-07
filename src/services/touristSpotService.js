@@ -1,4 +1,3 @@
-const API_URL = "http://192.168.1.237/e-gala-api/wp-json/wp/v2/tourist_spots";
 
 export async function getTouristSpots() {
     const response = await fetch(`${API_URL}?_embed`);

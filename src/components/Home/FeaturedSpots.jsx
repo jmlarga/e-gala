@@ -7,7 +7,6 @@ const FeaturedSpots = () => {
 
   useEffect(() => {
     fetch(
-      "http://192.168.1.237/e-gala-api/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
     )
       .then((res) => res.json())
       .then((data) => {
