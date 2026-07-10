@@ -7,7 +7,7 @@ const FeaturedSpots = () => {
 
   useEffect(() => {
     fetch(
-      "https://e-gala-api.freedev.app/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
+      "https://parts-colors-reviewing-wants.trycloudflare.com/e-gala-api/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
     )
       .then((res) => res.json())
       .then((data) => {
