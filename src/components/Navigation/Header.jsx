@@ -9,7 +9,7 @@ export default function Header({
 
     return (
         <header className="sticky top-0 z-50 bg-white border-b border-[#7db168]/20 shadow-sm">
-			<div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-3 ">
+			<div className="max-w-[1280px] mx-auto flex justify-between items-center px-4 py-3 relative">
 				<Link
                             to="./"><img
 					src={logo}

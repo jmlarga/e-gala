@@ -38,7 +38,7 @@ const ScrollButton = () => {
     <button
       onClick={scrollToSearch}
       aria-label="Scroll to Search"
-      className="fixed bottom-[100px] right-6 p-2 md:right-10 z-[999] cursor-pointer rounded-xs bg-[#1a6859] text-white text-xs shadow-xl hover:scale-105 hover:bg-[#155448] transition-all duration-300 animate-bounce"
+      className="fixed bottom-[100px] right-6 p-2 md:right-10 z-[999] cursor-pointer rounded-xs bg-yellow-400 text-[##1a6859] text-xs shadow-xl hover:scale-105 transition-all duration-300 animate-bounce"
     >
       <span class="md:block hidden">Explore More</span>
 	   <ArrowDown size={24} strokeWidth={2} className="mx-auto" />

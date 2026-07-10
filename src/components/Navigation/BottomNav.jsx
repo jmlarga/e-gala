@@ -56,7 +56,7 @@ export default function BottomNav() {
                             className={({ isActive }) =>
                                 `flex flex-col items-center justify-center p-2 rounded-xl transition-all ${
                                     isActive
-                                        ? "bg-[#7db168] text-white shadow-md"
+                                        ? "bg-[#1a6859] text-white shadow-md"
                                         : "text-gray-500 hover:bg-gray-50"
                                 }`
                             }

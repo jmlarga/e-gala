@@ -97,7 +97,7 @@ const About = () => {
 
       </div>
 	  <div className="w-full mx-auto px-5 bg-gray-600 mt-12 py-4">
-		<p class="text-xs text-white"><strong>Disclaimer:</strong> e-Gala is an independent personal project and is not affiliated with any government agency, LGU, tourism office, or private organization. Information is provided for general reference only.</p>
+		<p className="text-xs text-white"><strong>Disclaimer:</strong> e-Gala is an independent personal project and is not affiliated with any government agency, LGU, tourism office, or private organization. Information is provided for general reference only.</p>
       </div>
     </section>
 	
