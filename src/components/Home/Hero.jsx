@@ -83,7 +83,7 @@ export default function Hero() {
 
             {/* Main Card */}
 
-            <div className="absolute left-6 -top-8 rotate-[-7deg] rounded-sm bg-white p-[5px] shadow-xl">
+            <div className="w-[45%] absolute left-6 top-0 rotate-[-7deg] rounded-sm bg-white p-[5px] shadow-xl">
 
               <img
                 src={heroMain}
@@ -95,12 +95,12 @@ export default function Hero() {
 
             {/* Bottom Card */}
 
-            <div className="absolute bottom-16 right-0 rotate-[8deg] rounded-sm bg-white p-[5px] shadow-xl">
+            <div className="w-[45%] absolute bottom-14 right-0 rotate-[8deg] rounded-sm bg-white p-[5px] shadow-xl">
 
               <img
                 src={card1}
                 alt="Rock Formation"
-                className="w-60 rounded-sm"
+                className="rounded-sm"
               />
 
             </div>
@@ -121,7 +121,7 @@ export default function Hero() {
 
             {/* Floating Card */}
 
-            <div className="absolute left-20 bottom-0 flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-lg">
+            <div className="absolute left-8 bottom-10 flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-lg">
 
               <div>
 
