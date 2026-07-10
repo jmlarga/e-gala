@@ -38,7 +38,7 @@ export default function Hero() {
               Discover the Heart of the Philippines
             </span>
 
-            <h1 className="mt-6 md:text-5xl text-4xl font-black leading-none text-white">
+            <h1 className="mt-6 md:text-5xl sm:text-4xl text-3xl font-black leading-none text-white">
 
              Explore the Beauty of 
 
