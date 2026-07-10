@@ -80,7 +80,7 @@ export default function Contact() {
 
 		try {
 			const response = await fetch(
-				"https://parts-colors-reviewing-wants.trycloudflare.com/e-gala-ap/wp-json/e-gala/v1/contact",
+				"https://celebrities-unlikely-prerequisite-salvation.trycloudflare.com/e-gala-api/wp-json/e-gala/v1/contact",
 				{
 					method: "POST",
 					headers: {

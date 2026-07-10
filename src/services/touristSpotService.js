@@ -1,4 +1,4 @@
-const API_URL = "https://parts-colors-reviewing-wants.trycloudflare.com/e-gala-api/wp-json/wp/v2/tourist_spots";
+const API_URL = "https://celebrities-unlikely-prerequisite-salvation.trycloudflare.com/e-gala-api/wp-json/wp/v2/tourist_spots";
 export async function getTouristSpots() {
     const response = await fetch(`${API_URL}?_embed`);
 
