@@ -11,8 +11,8 @@ export default function Hero() {
   style={{
     backgroundImage: `
       linear-gradient(
-        rgba(26,104,89,0.92),
-        rgba(26,104,89,0.92)
+        rgba(26,104,89,0.85),
+        rgba(26,104,89,0.85)
       ),
       url(${heroBg})
     `,
