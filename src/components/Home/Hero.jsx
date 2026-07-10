@@ -108,7 +108,7 @@ export default function Hero() {
 
             {/* Floating Badge */}
 
-            <div className="absolute right-12 -top-5 rounded-2xl bg-white px-8 py-6 shadow-xl">
+            <div className="absolute right-12 -top-2 rounded-lg bg-white px-8 py-3 shadow-xl">
 
               <p className="text-sm text-gray-500">
                 Discover 20+
@@ -121,7 +121,7 @@ export default function Hero() {
 
             {/* Floating Card */}
 
-            <div className="absolute left-8 bottom-10 flex items-center gap-3 rounded-2xl bg-white px-5 py-3 shadow-lg">
+            <div className="absolute left-8 bottom-10 flex items-center gap-3 rounded-lg bg-white px-5 py-3 shadow-lg">
 
               <div>
 
