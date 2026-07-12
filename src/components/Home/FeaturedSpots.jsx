@@ -7,7 +7,7 @@ const FeaturedSpots = () => {
 
   useEffect(() => {
     fetch(
-      "https://todd-saves-emotions-aged.trycloudflare.com/e-gala-api/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
+      "https://192.168.1.237/e-gala-api/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
     )
       .then((res) => res.json())
       .then((data) => {

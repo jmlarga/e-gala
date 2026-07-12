@@ -1,61 +1,91 @@
-import { Search, MapPinned, Trees, Church, UtensilsCrossed, Camera } from "lucide-react";
+import { Search } from "lucide-react";
 
+const SearchBar = ({ query, setQuery, results, onSelect }) => {
+    return (
+        <section id="search" className="bg-white py-20">
+            <div className="max-w-6xl mx-auto px-5">
 
+                <div className="text-center">
+                    <h2 className="text-4xl font-bold text-[#1a6859]">
+                        Find Your Next Destination
+                    </h2>
 
-const SearchBar = () => {
-  return (
-    <section id="search" className="bg-gray-50 py-20">
+                    <p className="mt-4 text-gray-600">
+                        Search tourist destinations across Marinduque.
+                    </p>
+                </div>
 
-      <div className="max-w-6xl mx-auto px-5">
+                <div className="relative mt-10">
 
-        {/* Heading */}
+                    <div className="bg-white rounded-2xl shadow-xl p-3 flex items-center">
 
-        <div className="text-center">
+                        <Search className="text-gray-400 ml-3" size={22} />
 
-          <h2 className="text-4xl font-bold text-[#1a6859]">
-            Find Your Next Destination
-          </h2>
+                        <input
+                            type="text"
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            placeholder="Search destinations..."
+                            className="w-full py-3 px-4 outline-none"
+                        />
 
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-            Search tourist destinations, restaurants, churches, beaches,
-            mountains, and more throughout Marinduque.
-          </p>
+                    </div>
 
-        </div>
+                   {query.trim() && (
+					<div className="absolute z-50 mt-2 w-full bg-white rounded-2xl shadow-xl overflow-hidden">
 
-        {/* Search */}
+						{results.length > 0 ? (
 
-        <div className="mt-10 bg-white rounded-2xl shadow-xl p-3 flex flex-col md:flex-row gap-3">
+							results.map((spot) => (
+								<button
+									key={spot.id}
+									onClick={() => onSelect(spot)}
+									className="w-full flex items-center gap-4 p-4 hover:bg-gray-50 transition text-left"
+								>
+									<img
+										src={
+											spot._embedded?.["wp:featuredmedia"]?.[0]?.source_url
+										}
+										alt={spot.title.rendered}
+										className="w-16 h-16 rounded-lg object-cover"
+									/>
 
-          <div className="flex-1 flex items-center px-4">
+									<div>
+										<h4 className="font-semibold">
+											{spot.title.rendered}
+										</h4>
 
-            <Search
-              className="text-gray-400 mr-3"
-              size={22}
-            />
+										<p className="text-sm text-gray-500">
+											{spot.acf?.category}
+										</p>
+									</div>
+								</button>
+							))
 
-            <input
-              type="text"
-              placeholder="Search destinations..."
-              className="w-full outline-none py-3 text-lg"
-            />
+						) : (
 
-          </div>
+							<div className="p-8 text-center">
 
-          <button className="bg-[#1a6859] hover:bg-[#155448] text-white px-8 py-4 rounded-xl transition font-semibold">
-            Search
-          </button>
+								<p className="text-lg font-semibold text-gray-700">
+									No destinations found
+								</p>
 
-        </div>
+								<p className="text-sm text-gray-500 mt-2">
+									Try searching for another tourist spot or category.
+								</p>
 
-        {/* Categories */}
+							</div>
 
-        
+						)}
 
-      </div>
+					</div>
+				)}
 
-    </section>
-  );
+                </div>
+
+            </div>
+        </section>
+    );
 };
 
 export default SearchBar;

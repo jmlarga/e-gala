@@ -44,7 +44,12 @@ export default function SpotDetails() {
 
     return (
         <div className="max-w-5xl mx-auto">
-
+				<h1 className="text-3xl font-bold text-[#1a6859]">
+					{spot.title.rendered}
+				</h1>
+				<span className="bg-white/20 px-3 py-1 rounded-full text-sm">
+                                {spot.acf.category}
+                            </span>
             {image && (
                 <img
                     src={image}
@@ -55,9 +60,7 @@ export default function SpotDetails() {
 
             <div className="mt-6">
 
-                <h1 className="md:text-2xl text-xl font-bold text-[#1a6859]">
-                    {spot.title.rendered}
-                </h1>
+                
 					
                 <div
                     className="mt-4 prose max-w-none text-[#4B5563] text-sm"

@@ -23,7 +23,7 @@ const features = [
 
 const About = () => {
   return (
-    <section className="bg-gray-50 pt-12" id="about">
+    <section className="bg-white pt-12" id="about">
       <div className="max-w-7xl mx-auto px-5">
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">

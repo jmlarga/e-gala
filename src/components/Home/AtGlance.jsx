@@ -1,6 +1,6 @@
 const AtGlance = () => {
   return (
-    <section className="bg-white py-12" id="glance">
+    <section className="bg-gray-50 py-12" id="glance">
       <div className="max-w-7xl mx-auto px-5">
 
         {/* Heading */}
