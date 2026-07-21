@@ -1,6 +1,6 @@
-const API_URL = "https://e-gala-api.byethost10.com/wp-json/wp/v2/tourist_spots";
+import API_URL from "../config/api";
 export async function getTouristSpots() {
-    const response = await fetch(`${API_URL}?_embed`);
+    const response = await fetch(`${API_URL}/wp/v2/tourist_spots?_embed`);
 
     if (!response.ok) {
         throw new Error("Failed to fetch tourist spots.");
@@ -10,9 +10,7 @@ export async function getTouristSpots() {
 }
 
 export async function getTouristSpot(slug) {
-    const response = await fetch(
-        `${API_URL}?slug=${slug}&_embed`
-    );
+      const response = await fetch(`${API_URL}/wp/v2/tourist_spots?slug=${slug}&_embed`);
 
     if (!response.ok) {
         throw new Error("Failed to fetch tourist spot.");

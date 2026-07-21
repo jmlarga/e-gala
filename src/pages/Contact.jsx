@@ -6,7 +6,7 @@ import {
     FaCommentDots,
     FaPaperPlane
 } from "react-icons/fa";
-
+import API_URL from "../config/api";
 import toast from "react-hot-toast";
 
 function FormField({
@@ -79,16 +79,13 @@ export default function Contact() {
 		setLoading(true);
 
 		try {
-			const response = await fetch(
-				"https://celebrities-unlikely-prerequisite-salvation.trycloudflare.com/e-gala-api/wp-json/e-gala/v1/contact",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(form),
-				}
-			);
+			const response = await fetch(`${API_URL}/e-gala/v1/contact`, {
+				  method: "POST",
+				  headers: {
+					"Content-Type": "application/json",
+				  },
+				  body: JSON.stringify(form),
+				});
 
 			const data = await response.json();
 

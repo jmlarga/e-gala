@@ -14,7 +14,6 @@ export default function InfoCard({ spot }) {
 
     return (
         <Link to={`/spots/${spot.slug}`}>
-
             <article className="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl hover:-translate-y-1 transition">
 
                 {image && (
@@ -37,13 +36,10 @@ export default function InfoCard({ spot }) {
                         spot.acf.description
                     }}
                   />
-				  <Link
-                    to={`/spots/${spot.slug}`}
-                    className="inline-flex items-center mt-6 font-semibold text-[#1a6859] hover:gap-3 transition-all"
-                  >
+				  
                     Explore Destination
                     <span className="ml-2">→</span>
-                  </Link>
+                  
 
                 </div>
 

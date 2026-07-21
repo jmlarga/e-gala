@@ -23,8 +23,8 @@ export default function Hero() {
 >
 
       {/* Blur Background */}
-      <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-emerald-300/20 blur-3xl"></div>
-	  <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-teal-300/15 blur-3xl"></div>
+      <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-emerald-300/20 blur-3xl md:block hidden"></div>
+	  <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-teal-300/15 blur-3xl md:block hidden"></div>
 
       <div className="mx-auto grid min-h-[calc(100vh-180px)] max-w-7xl grid-cols-1 items-center gap-12 px-6  lg:px-12">
 

@@ -7,7 +7,7 @@ import LoadingScreen from "./components/Loading/LoadingScreen";
 import Home from "./pages/Home/Home";
 import Spots from "./pages/Spots/Spots";
 import SpotDetails from "./pages/Spots/SpotDetails";
-import Hotels from "./pages/Hotels/Hotels";
+import Stays from "./pages/Stays/Stays";
 import Dining from "./pages/Dining/Dining";
 import Directions from "./pages/Directions/Directions";
 import About from "./pages/About";
@@ -31,13 +31,6 @@ function App() {
         return <LoadingScreen />;
     }
 
-    const pages = {
-		Home: <Home />,
-		Spots: <Spots />,
-		Hotels: <Hotels />,
-		Dining: <Dining />,
-		Directions: <Directions />
-	};
 
     return (
         <div className="h-dvh w-full flex flex-col bg-white text-[#1a6859] overflow-hidden">
@@ -52,7 +45,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/spots" element={<Spots />} />
                 <Route path="/spots/:slug" element={<SpotDetails />} />
-                <Route path="/hotels" element={<Hotels />} />
+                <Route path="/stays" element={<Stays />} />
                 <Route path="/dining" element={<Dining />} />
                 <Route path="/directions" element={<Directions />} />
 				<Route path="/about" element={<About />} />

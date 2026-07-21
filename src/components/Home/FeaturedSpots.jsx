@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import API_URL from "../../config/api";
 const FeaturedSpots = () => {
   const [spots, setSpots] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(
-      "https://e-gala-api.byethost10.com/wp-json/wp/v2/tourist_spots?_embed&per_page=6"
+       `${API_URL}/wp/v2/tourist_spots?_embed&per_page=6`
     )
       .then((res) => res.json())
       .then((data) => {

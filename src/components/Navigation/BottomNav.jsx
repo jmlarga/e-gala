@@ -20,8 +20,8 @@ const navItems = [
         icon: FaMapMarkedAlt
     },
     {
-        name: "Hotels",
-        path: "/hotels",
+        name: "Stays",
+        path: "/stays",
         icon: FaHotel
     },
     {
