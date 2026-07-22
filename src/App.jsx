@@ -13,6 +13,7 @@ import Directions from "./pages/Directions/Directions";
 import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Contact from "./pages/Contact";
+import AppReviews from "./pages/AppReviews";
 
 function App() {
     const [loading, setLoading] = useState(true);
