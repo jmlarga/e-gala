@@ -144,7 +144,10 @@ console.log(spots.gallery);
 		/>
         <h2 className="text-3xl font-bold mb-4">Contact</h2>
         <div className="grid md:grid-cols-3 gap-4">
-		  <a href={spots.acf.facebook_page} target="_blank" rel="noopener noreferrer">{spots.acf.facebook_page && <Contact icon={<FaFacebook className="text-[#1a6859] text-2xl mx-auto mb-3" />} label="Facebook"  value={spots.acf.facebook_page}/>}</a>
+		  {spots.acf.facebook_page ? ( <a href={spots.acf.facebook_page} target="_blank" rel="noopener noreferrer">{spots.acf.facebook_page && <Contact icon={<FaFacebook className="text-[#1a6859] text-2xl mx-auto mb-3" />} label="Facebook"  value={spots.acf.facebook_page}/>}</a>
+		  ) : ( 
+		  <Contact icon={<FaFacebook className="text-[#1a6859] text-2xl mx-auto mb-3" />} label="Facebook"  value="Not Available"/>
+		  )}
 			  {spots.acf.website ? ( <a href={spots.acf.website} target="_blank" rel="noopener noreferrer">
 				<Contact icon={<FaGlobe className="text-[#1a6859] text-2xl mx-auto mb-3" />} label="Website" value={spots.acf.website}/>
 			</a>

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import ReviewModal from "../Rating/ReviewModal";
 import {
     FaInfoCircle,
     FaEnvelope,
     FaShieldAlt,
-    FaStar
+    FaStar,
+	FaRegComments
 } from "react-icons/fa";
 
 export default function MobileMenu({
@@ -11,7 +14,7 @@ export default function MobileMenu({
     setIsMenuOpen
 }) {
     const close = () => setIsMenuOpen(false);
-
+	const [showReviewModal, setShowReviewModal] = useState(false);
     return (
         <>
             <div
@@ -56,13 +59,27 @@ export default function MobileMenu({
                 />
 
                 <MenuButton
-                    icon={<FaStar />}
-                    label="Rate e-Gala"
-                    onClick={close}
-                />
+					icon={<FaStar />}
+					label="Rate e-Gala"
+					onClick={() => {
+						close(); // isara ang menu
+						setShowReviewModal(true);
+					}}
+				/>
+				<MenuLink
+					to="/app-reviews"
+					icon={<FaRegComments />}
+					label="App Reviews"
+					onClick={close}
+				/>
             </div>
+			<ReviewModal
+				isOpen={showReviewModal}
+				onClose={() => setShowReviewModal(false)}
+			/>
         </>
     );
+	
 }
 
 function MenuLink({ to, icon, label, onClick }) {
